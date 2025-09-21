@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Error ✦ Internal Doc Search</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--accent:#60a5fa;--err:#ef4444;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;
+         display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:24px}
+    .card{background:var(--panel);border:1px solid #1f2937;border-radius:16px;padding:32px;max-width:500px;
+          box-shadow:0 12px 30px rgba(0,0,0,.35)}
+    h1{font-size:28px;margin-bottom:12px;color:var(--err)}
+    p{color:var(--muted);line-height:1.6}
+    a.button{display:inline-block;margin-top:20px;background:var(--accent);color:#0b1220;
+             padding:12px 20px;border-radius:10px;font-weight:700;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>⚠️ Something went wrong</h1>
+    <p id="msg">We couldn’t complete your request.<br>
+       Please check your login status, network connection, or try again later.</p>
+    <a href="index.html" class="button">⬅ Back to Home</a>
+  </div>
+<script>
+  // If redirected with an error from Cognito (e.g. #error=... in the URL)
+  if(location.hash.includes("error_description")){
+    const params = new URLSearchParams(location.hash.substring(1));
+    document.getElementById("msg").textContent =
+      decodeURIComponent(params.get("error_description") || "An error occurred.");
+    history.replaceState({}, document.title, location.pathname); // clean URL
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internal Doc Search ✦ PoC</title>
+  <style>
+  :root{
+    /* keep the dark UI but switch accent to your brand gradient */
+    --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --text:#e2e8f0;
+    --accent:#c084fc; /* light purple for buttons, still readable on dark */
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+  .container{max-width:1100px;margin:0 auto;padding:24px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+  .brand{display:flex;gap:14px;align-items:center}
+  /* NEW logo: rounded square with purple→pink gradient to match your image */
+  .logo{
+    width:44px;height:44px;border-radius:12px;
+    background:linear-gradient(135deg,#a78bfa 0%, #c084fc 45%, #f472b6 100%);
+    display:grid;place-items:center;font-weight:800;color:white;letter-spacing:.5px
+  }
+  .appname{display:flex;flex-direction:column;line-height:1.1}
+  .appname .title{font-size:22px;font-weight:800}
+  .appname .subtitle{font-size:12px;color:var(--muted)}
+  .tag{font-size:12px;color:var(--muted)}
+  .card{background:var(--panel);border:1px solid #1f2937;border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .grid{display:grid;grid-template-columns:2.2fr 1fr;gap:16px}
+  .row{display:flex;gap:8px;align-items:center}
+  button{background:#1e293b;border:1px solid #334155;color:var(--text);padding:10px 14px;border-radius:10px;cursor:pointer}
+  button.primary{background:var(--accent);border-color:transparent;color:#0b1220;font-weight:700}
+  button.ghost{background:transparent;border-color:#334155}
+  input,textarea{width:100%;padding:12px 12px;border-radius:10px;border:1px solid #334155;background:#0b1220;color:var(--text)}
+  textarea{min-height:120px;resize:vertical}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#0b1220;border:1px solid #334155;color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px}
+  .muted{color:var(--muted)}
+  .hidden{display:none}
+  .answer{white-space:pre-wrap;line-height:1.6}
+  .ref{background:#0b1220;border:1px dashed #334155;border-radius:12px;padding:10px;margin:6px 0}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .footer{margin-top:16px;font-size:12px;color:var(--muted)}
+  .progress{height:8px;background:#0b1220;border:1px solid #334155;border-radius:999px;overflow:hidden}
+  .bar{height:100%;width:0%;background:var(--accent);transition:width .2s}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+    <div class="logo">AI</div>
+    <div class="appname">
+      <div class="title">ASKITTY</div>
+      <div class="subtitle">ASKITTY AI — RAG PoC</div>
+    </div>
+  </div>
+      <div class="row">
+        <span id="userBadge" class="pill hidden"></span>
+        <button id="loginBtn" class="primary">Login</button>
+        <button id="logoutBtn" class="ghost hidden">Logout</button>
+      </div>
+    </header>
+
+    <!-- 上传区（登录后显示） -->
+    <section id="uploadCard" class="card hidden" style="margin-bottom:16px">
+      <div class="row">
+        <input type="file" id="fileInput" />
+        <button id="uploadBtn" class="primary">Upload</button>
+      </div>
+      <div class="row" style="margin-top:10px;gap:12px">
+        <div class="progress" style="flex:1"><div id="upBar" class="bar"></div></div>
+        <span id="upStatus" class="muted mono"></span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <div class="row" style="justify-content:space-between;margin-bottom:6px">
+          <div class="pill">Environment: <span id="envLabel" class="mono" style="margin-left:6px"></span></div>
+          <div class="pill">API: <span id="apiLabel" class="mono" style="margin-left:6px"></span></div>
+        </div>
+
+        <label class="muted">Ask a question about your internal manuals, policies or SOPs:</label>
+        <textarea id="q" placeholder="e.g., How do I reset the XYZ machine emergency stop?"></textarea>
+        <div class="row" style="margin-top:10px">
+          <button id="askBtn" class="primary">Ask</button>
+          <button id="clearBtn" class="ghost">Clear</button>
+          <span id="status" class="muted" style="margin-left:auto"></span>
+        </div>
+
+        <div id="answerWrap" class="card" style="margin-top:14px;display:none">
+          <div style="font-weight:700;margin-bottom:8px">Answer</div>
+          <div id="answer" class="answer"></div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div style="font-weight:700;margin-bottom:6px">Citations</div>
+        <div id="refs"></div>
+        <div class="footer">Click a citation to generate a presigned download link.</div>
+      </aside>
+    </div>
+
+    <div class="footer">Tip: Upload documents above (prefix <span class="mono">uploads/</span>) to trigger ingestion.</div>
+  </div>
+
+<script>
+  // === 配置区：把这几项换成你的（已经按你现在的值填好） ===
+  const CONFIG = {
+    REGION: 'ap-southeast-5',
+    API_BASE_URL: 'https://z14hu7qir0.execute-api.ap-southeast-5.amazonaws.com',
+    COGNITO_DOMAIN: 'https://ap-southeast-5n9l7wtgn6.auth.ap-southeast-5.amazoncognito.com',
+    COGNITO_CLIENT_ID: '27k2hhq1pakfhfg0gopdd12lm5',
+    REDIRECT_URI: 'https://d2203w8umw4us0.cloudfront.net/',   // ⚠️ 必须和 Cognito 里的 callback 完全一致
+    USE_AUTH: true
+  };
+
+  // === 简单的 Token 存储 ===
+  const tokenStore = {
+    get id(){ return localStorage.getItem('id_token') || '' },
+    set id(v){ localStorage.setItem('id_token', v || '') },
+    clear(){ localStorage.removeItem('id_token') }
+  };
+
+  // === 解析 Implicit Flow 回调（#id_token=...） ===
+  function parseHashTokens(){
+    if (!location.hash.startsWith('#')) return;
+    const params = new URLSearchParams(location.hash.substring(1));
+    const id = params.get('id_token');
+    if (id){ tokenStore.id = id; history.replaceState({}, document.title, location.pathname); }
+  }
+
+  // === 登录 / 登出（Hosted UI，Implicit Flow） ===
+  function cognitoLogin(){
+    const url = new URL(CONFIG.COGNITO_DOMAIN + '/login');
+    url.searchParams.set('client_id', CONFIG.COGNITO_CLIENT_ID);
+    url.searchParams.set('response_type', 'token');         // Implicit Flow
+    url.searchParams.set('scope', 'openid email profile');
+    url.searchParams.set('redirect_uri', CONFIG.REDIRECT_URI);
+    location.assign(url.toString());
+  }
+  function cognitoLogout(){
+    tokenStore.clear();
+    const url = new URL(CONFIG.COGNITO_DOMAIN + '/logout');
+    url.searchParams.set('client_id', CONFIG.COGNITO_CLIENT_ID);
+    url.searchParams.set('logout_uri', CONFIG.REDIRECT_URI);
+    location.assign(url.toString());
+  }
+
+  // === JWT decode（只用于显示用户名，不做安全判断）===
+  function decodeJwt(token){
+    try{
+      const p = token.split('.')[1];
+      return JSON.parse(atob(p.replace(/-/g,'+').replace(/_/g,'/')));
+    }catch(e){ return null; }
+  }
+
+  // === UI 辅助 ===
+  function setStatus(msg){ document.getElementById('status').textContent = msg || ''; }
+  function setUpStatus(msg){ document.getElementById('upStatus').textContent = msg || ''; }
+  function setUpBar(pct){ document.getElementById('upBar').style.width = (pct||0) + '%'; }
+  function showAnswer(text){
+    const wrap = document.getElementById('answerWrap');
+    document.getElementById('answer').textContent = text;
+    wrap.style.display = text ? 'block':'none';
+  }
+  function renderRefs(list){
+    const holder = document.getElementById('refs');
+    holder.innerHTML = '';
+    (list || []).forEach((r,i)=>{
+      const page = r.pageStart || 1;
+      const name = r.fileName || (r.s3Key || '').split('/').pop();
+      const div = document.createElement('div');
+      div.className = 'ref';
+      div.innerHTML = `<div><b>[${i+1}]</b> ${name} — Page ${page}</div>
+        <small>${r.s3Key || ''}</small>
+        <div class="row" style="margin-top:8px">
+          <button data-key="${r.s3Key}" data-page="${page}" class="ghost">Open</button>
+        </div>`;
+      holder.appendChild(div);
+    });
+    holder.querySelectorAll('button').forEach(btn=>{
+      btn.addEventListener('click', async (e)=>{
+        const key = e.currentTarget.getAttribute('data-key');
+        const page = e.currentTarget.getAttribute('data-page') || 1;
+        if (!key) return;
+        try{
+          setStatus('Requesting presigned URL...');
+          const resp = await fetch(CONFIG.API_BASE_URL + '/presign', {
+            method:'POST', headers: authHeaders({ 'Content-Type':'application/json' }),
+            body: JSON.stringify({ s3Key: key })
+          });
+          const data = await resp.json();
+          if (data.url){
+            const url = data.url + (key.toLowerCase().endsWith('.pdf') ? `#page=${page}` : '');
+            window.open(url, '_blank');
+          } else alert('No URL returned');
+        }catch(err){ alert('Presign error: ' + err); }
+        finally{ setStatus(''); }
+      });
+    });
+  }
+
+  function authHeaders(extra = {}) {
+  if (CONFIG.USE_AUTH && tokenStore.id) {
+    return Object.assign({ Authorization: `Bearer ${tokenStore.id}` }, extra);
+  }
+  return extra;
+}
+
+
+  // === 业务按钮 ===
+  async function ask(){
+    const q = document.getElementById('q').value.trim();
+    if (!q){ setStatus('Please enter a question.'); return; }
+    setStatus('Thinking...'); showAnswer(''); renderRefs([]);
+    try{
+      const resp = await fetch(CONFIG.API_BASE_URL + '/query', {
+        method:'POST',
+        headers: authHeaders({ 'Content-Type':'application/json' }),
+        body: JSON.stringify({ question: q })
+      });
+      if (!resp.ok){
+        const t = await resp.text();
+        throw new Error('API error ' + resp.status + ': ' + t);
+      }
+      const data = await resp.json();
+      showAnswer(data.answer || 'No answer.');
+      renderRefs(data.references || []);
+    }catch(err){
+      showAnswer('Error: ' + err.message);
+    }finally{
+      setStatus('');
+    }
+  }
+
+  async function uploadSelected(){
+    const f = document.getElementById('fileInput').files[0];
+    if (!f) return alert('Pick a file first!');
+    try{
+      setUpBar(0); setUpStatus('Requesting upload URL...');
+      const resp = await fetch(CONFIG.API_BASE_URL + '/presign-upload', {
+        method:'POST',
+        headers: authHeaders({ 'Content-Type':'application/json' }),
+        body: JSON.stringify({ filename: f.name, contentType: f.type || 'application/octet-stream' })
+      });
+      const data = await resp.json();
+      if (!data.uploadUrl) throw new Error('Failed to get upload URL');
+      setUpStatus('Uploading...'); setUpBar(10);
+      const putResp = await fetch(data.uploadUrl, { method:'PUT', headers: { 'Content-Type': f.type || 'application/octet-stream' }, body: f });
+      if (!putResp.ok) throw new Error('S3 upload failed: ' + putResp.status);
+      setUpBar(100); setUpStatus('Uploaded. Ingestion will start shortly.');
+      document.getElementById('fileInput').value = '';
+    }catch(e){
+      setUpStatus('Error: ' + e.message);
+      setUpBar(0);
+    }
+  }
+
+  // === 初始化 ===
+  function init(){
+    // 1) 先解析回调里的 #id_token
+    parseHashTokens();
+
+    // 2) 标注环境
+    document.getElementById('envLabel').textContent = CONFIG.REGION;
+    document.getElementById('apiLabel').textContent = new URL(CONFIG.API_BASE_URL).host;
+
+    // 3) 根据是否已登录切换 UI
+    const loginBtn = document.getElementById('loginBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const userBadge = document.getElementById('userBadge');
+    const uploadCard = document.getElementById('uploadCard');
+
+    if (CONFIG.USE_AUTH){
+      if (tokenStore.id){
+        const jwt = decodeJwt(tokenStore.id) || {};
+        const name = jwt.email || jwt['cognito:username'] || 'Signed in';
+        userBadge.textContent = name; userBadge.classList.remove('hidden');
+        loginBtn.classList.add('hidden'); logoutBtn.classList.remove('hidden');
+        uploadCard.classList.remove('hidden');
+      }else{
+        userBadge.classList.add('hidden'); loginBtn.classList.remove('hidden'); logoutBtn.classList.add('hidden');
+        uploadCard.classList.add('hidden');
+      }
+    }else{
+      userBadge.classList.add('hidden'); loginBtn.classList.add('hidden'); logoutBtn.classList.add('hidden');
+      uploadCard.classList.remove('hidden');
+    }
+
+    // 4) 绑定按钮
+    document.getElementById('askBtn').onclick = ask;
+    document.getElementById('clearBtn').onclick = ()=>{ document.getElementById('q').value=''; showAnswer(''); renderRefs([]); };
+    document.getElementById('uploadBtn').onclick = uploadSelected;
+    loginBtn.onclick = cognitoLogin;
+    logoutBtn.onclick = cognitoLogout;
+  }
+
+  init();
+</script>
+</body>
+</html>
