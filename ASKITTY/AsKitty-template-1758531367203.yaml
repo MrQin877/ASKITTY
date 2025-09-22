@@ -1,0 +1,3162 @@
+---
+Metadata:
+  AWSToolsMetrics:
+    IaC_Generator: "arn:aws:cloudformation:ap-southeast-5:497046674032:generatedTemplate/d29e1a28-551c-4588-869f-1cb102ff6dcb"
+Parameters:
+  LambdaFunctionIngestCodeZipFileVs7RV:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionIngestCodeS3KeytBDmQ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionPresignCodeImageUrifljlF:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionCorshandlerCodeS3KeyEYKcS:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionIngestCodeImageUrifDxLr:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionCorshandlerCodeZipFileZpRxg:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionQueryCodeS3BucketLey9W:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionPresignCodeS3Bucketan6EN:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionIngestCodeS3BucketEWdkp:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionIngestCodeS3ObjectVersionxCU96:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionPresignuploadCodeS3KeylF1u8:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionPresignuploadCodeS3Bucket0GS8N:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionPresignCodeZipFileALvut:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionQueryCodeImageUrip0oDb:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionCorshandlerCodeS3ObjectVersionOn2rw:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionPresignCodeS3KeygVfho:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionPresignuploadCodeS3ObjectVersionFpF2L:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionPresignuploadCodeZipFileVLk8P:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionQueryCodeS3ObjectVersioneCftG:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+  LambdaFunctionCorshandlerCodeImageUrii3tSp:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionQueryCodeS3KeyFNLan:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon S3 key of the deployment package."
+  LambdaFunctionCorshandlerCodeS3Bucketwu13F:
+    NoEcho: "true"
+    Type: "String"
+    Description: "An Amazon S3 bucket in the same AWS-Region as your function. The\
+      \ bucket can be in a different AWS-account."
+  LambdaFunctionQueryCodeZipFileojjtG:
+    NoEcho: "true"
+    Type: "String"
+    Description: "(Node.js and Python) The source code of your Lambda function. If\
+      \ you include your function source inline with this parameter, CFN places it\
+      \ in a file named ``index`` and zips it to create a [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).\
+      \ This zip file cannot exceed 4MB. For the ``Handler`` property, the first part\
+      \ of the handler identifier must be ``index``. For example, ``index.handler``.\n\
+      \  When you specify source code inline for a Node.js function, the ``index``\
+      \ file that CFN creates uses the extension ``.js``. This means that LAM treats\
+      \ the file as a CommonJS module. ES modules aren't supported for inline functions.\n\
+      \   For JSON, you must escape quotes and special characters such as newline\
+      \ (``\\n``) with a backslash.\n If you specify a function that interacts with\
+      \ an AWS CloudFormation custom resource, you don't have to write your own functions\
+      \ to send responses to the custom resource that invoked the function. AWS CloudFormation\
+      \ provides a response module ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))\
+      \ that simplifies sending responses. See [Using Lambda with CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html)\
+      \ for details."
+  LambdaFunctionPresignuploadCodeImageUriQBvYh:
+    NoEcho: "true"
+    Type: "String"
+    Description: "URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\
+      \ in the Amazon ECR registry."
+  LambdaFunctionPresignCodeS3ObjectVersionzeEpb:
+    NoEcho: "true"
+    Type: "String"
+    Description: "For versioned objects, the version of the deployment package object\
+      \ to use."
+Resources:
+  CloudFrontOriginRequestPolicyHw:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "none"
+        Comment: "Policy for an origin to forward the Host header only"
+        HeadersConfig:
+          HeaderBehavior: "whitelist"
+          Headers:
+          - "host"
+        CookiesConfig:
+          CookieBehavior: "none"
+        Name: "Managed-HostHeaderOnly"
+  IAMRoleDocsearchlambdarole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonQDeveloperAccess"
+      - "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "docsearch-lambda-role"
+      Description: "Allows Lambda functions to call AWS services on your behalf."
+      Policies:
+      - PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Resource: "*"
+            Action:
+            - "logs:CreateLogGroup"
+            - "logs:CreateLogStream"
+            - "logs:PutLogEvents"
+            Effect: "Allow"
+            Sid: "LogsBasic"
+          - Resource: "arn:aws:s3:::kittymeow-doc-bucket/*"
+            Action:
+            - "s3:GetObject"
+            Effect: "Allow"
+            Sid: "ReadDocsBucket"
+          - Resource: "arn:aws:s3:::kittymeow-doc-bucket/*"
+            Action:
+            - "s3:PutObject"
+            - "s3:AbortMultipartUpload"
+            Effect: "Allow"
+            Sid: "S3PresignUpload"
+          - Resource: "arn:aws:s3:::kittymeow-doc-bucket"
+            Action:
+            - "s3:GetBucketLocation"
+            Effect: "Allow"
+            Sid: "S3BucketLocation"
+          - Resource: "arn:aws:dynamodb:ap-southeast-5:497046674032:table/DocChunks"
+            Action:
+            - "dynamodb:BatchWriteItem"
+            - "dynamodb:PutItem"
+            - "dynamodb:Query"
+            - "dynamodb:Scan"
+            - "dynamodb:GetItem"
+            - "dynamodb:DescribeTable"
+            Effect: "Allow"
+            Sid: "DynamoWriteReadDocChunks"
+          - Resource: "*"
+            Action:
+            - "bedrock:InvokeModel"
+            - "bedrock:InvokeModelWithResponseStream"
+            Effect: "Allow"
+            Sid: "BedrockInvoke"
+        PolicyName: "docsearch-inline"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  LogsLogStream20250921LATESTcf02f9b2045d4b97ae08a0cc2136f313:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]cf02f9b2045d4b97ae08a0cc2136f313"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  ApiGatewayV2DeploymentBl:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  CloudFrontCachePolicyE2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Amplify cache policy for static content"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "none"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "Host"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-StaticContent"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole7822808ba27c472083fe725913dcb201:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-7822808b-a27c-4720-83fe-725913dcb201"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/presign:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRolePresignroleazruq7dt"
+      Users: []
+  LogsLogStream20250921LATEST3ec72cc3692c4a6681d0c7c1fd115a0b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]3ec72cc3692c4a6681d0c7c1fd115a0b"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  ApiGatewayV2DeploymentT4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATEST2ab5635168604f30b39df8b7ab2de699:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]2ab5635168604f30b39df8b7ab2de699"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST0f352e0476344b6b9b9cd5f26d7aad52:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]0f352e0476344b6b9b9cd5f26d7aad52"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogGroupawslambdaquery:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      FieldIndexPolicies: []
+      LogGroupClass: "STANDARD"
+      LogGroupName: "/aws/lambda/query"
+      DataProtectionPolicy: {}
+  ApiGatewayV2DeploymentAx:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Created by AWS Lambda"
+  LogsLogStream20250921LATEST6f91ab4181d9463baf6a85a605cb0de0:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]6f91ab4181d9463baf6a85a605cb0de0"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  CloudFrontCachePolicyCI:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Default Amplify cache policy"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "Accept"
+            - "CloudFront-Viewer-Country"
+            - "Host"
+          CookiesConfig:
+            CookieBehavior: "all"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-Default"
+  LogsLogStream20250921LATEST1a2e5ca6328d4ec290152f503b517088:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]1a2e5ca6328d4ec290152f503b517088"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  AthenaWorkGroupPrimary:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Athena::WorkGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      WorkGroupConfiguration:
+        RequesterPaysEnabled: false
+        EnforceWorkGroupConfiguration: false
+        EngineVersion:
+          SelectedEngineVersion: "AUTO"
+        PublishCloudWatchMetricsEnabled: true
+        ResultConfiguration: {}
+      State: "ENABLED"
+      Tags: []
+      Name: "primary"
+  ApiGatewayV2DeploymentTV:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LambdaPermissionFunctioningest:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionIngest"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn:
+        Fn::GetAtt:
+        - "S3BucketKittymeowdocbucket"
+        - "Arn"
+      Principal: "s3.amazonaws.com"
+      SourceAccount: "497046674032"
+  LogsLogStream20250920LATEST6ec398dcfde64ef3a1b19ac3d2f523fc:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]6ec398dcfde64ef3a1b19ac3d2f523fc"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  ApiGatewayV2DeploymentCa:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  ApiGatewayV2DeploymentU3:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATEST616455481e814b4888ac8e69806d4423:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]616455481e814b4888ac8e69806d4423"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250920LATEST06a261e7ca9543eaa3c8b78fb69c27a6:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]06a261e7ca9543eaa3c8b78fb69c27a6"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  EC2NetworkAcl:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkAcl"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId:
+        Ref: "EC2VPC"
+      Tags: []
+  LogsLogStream20250921LATEST62fda9d0e2d448ce803653def929dfee:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]62fda9d0e2d448ce803653def929dfee"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  LogsLogStream20250921LATEST9fb62ec543d7456aa341efbf43137b8b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]9fb62ec543d7456aa341efbf43137b8b"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  IAMRoleCorshandlerrolemjdppirp:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-58f3ff33-0500-40f5-887b-be767926824b"
+      MaxSessionDuration: 3600
+      RoleName: "cors-handler-role-mjdppirp"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  CloudFrontCachePolicyEf:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Policy with caching enabled. Supports Gzip and Brotli compression."
+        MinTTL: 1
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "none"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "none"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 86400
+        Name: "Managed-CachingOptimized"
+  IAMRoleQueryroled35rupd4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-31fa4b48-8b31-462e-8102-b987cbbc33ea"
+      MaxSessionDuration: 3600
+      RoleName: "query-role-d35rupd4"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  DynamoDBTableDocChunks:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::DynamoDB::Table"
+    DeletionPolicy: "Retain"
+    Properties:
+      SSESpecification:
+        SSEEnabled: false
+      TableName: "DocChunks"
+      AttributeDefinitions:
+      - AttributeType: "S"
+        AttributeName: "pk"
+      - AttributeType: "S"
+        AttributeName: "sk"
+      ContributorInsightsSpecification:
+        Enabled: false
+      BillingMode: "PAY_PER_REQUEST"
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      WarmThroughput:
+        ReadUnitsPerSecond: 12000
+        WriteUnitsPerSecond: 4000
+      KeySchema:
+      - KeyType: "HASH"
+        AttributeName: "pk"
+      - KeyType: "RANGE"
+        AttributeName: "sk"
+      DeletionProtectionEnabled: true
+      TableClass: "STANDARD"
+      Tags: []
+      TimeToLiveSpecification:
+        Enabled: false
+  LogsLogStream20250920LATEST43e602bf716a4f468d87340068d02f56:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]43e602bf716a4f468d87340068d02f56"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  EC2Subnet:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: true
+      EnableDns64: false
+      VpcId:
+        Ref: "EC2VPC"
+      AvailabilityZoneId: "apse5-az1"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      CidrBlock: "172.31.0.0/20"
+      Ipv6Native: false
+      Tags: []
+  EC2SecurityGroup:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "default VPC security group"
+      GroupName: "default"
+      VpcId:
+        Ref: "EC2VPC"
+      SecurityGroupIngress:
+      - IpProtocol: "-1"
+        FromPort: -1
+        SourceSecurityGroupId:
+          Fn::GetAtt:
+          - "EC2VPC"
+          - "DefaultSecurityGroup"
+        ToPort: -1
+        SourceSecurityGroupOwnerId: "497046674032"
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+        FromPort: -1
+        ToPort: -1
+  LogsLogStream20250921LATEST59393b1461d54e2e8d3743681b014443:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]59393b1461d54e2e8d3743681b014443"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  CloudFrontCachePolicyFV:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Policy for Amplify Origin"
+        MinTTL: 2
+        MaxTTL: 600
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "CloudFront-Viewer-Country"
+            - "Host"
+          CookiesConfig:
+            CookieBehavior: "all"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 2
+        Name: "Managed-Amplify"
+  LogsLogStream20250921LATEST2ae992adf8e54ee69bff05eb4b6efc55:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]2ae992adf8e54ee69bff05eb4b6efc55"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRolee08bd8eb8f4b4109bc3c480b2b4f8f00:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-e08bd8eb-8f4b-4109-bc3c-480b2b4f8f00"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/ingest:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleIngestrolerv2v347o"
+      Users: []
+  LogsLogStream20250921LATESTd8ea0f863b3c484b8f4690b059ccec84:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]d8ea0f863b3c484b8f4690b059ccec84"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATEST09f77add6d584629aa5f31280bdab2e8:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]09f77add6d584629aa5f31280bdab2e8"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250921LATEST877c92d44f20459d835846fddfa11470:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]877c92d44f20459d835846fddfa11470"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATESTdabdea8e23e94ce8b73ce8c6db06c8b5:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]dabdea8e23e94ce8b73ce8c6db06c8b5"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATESTa6ec0c98df1943deb4bd4a16c88f95eb:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]a6ec0c98df1943deb4bd4a16c88f95eb"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogGroupawslambdapresign:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      FieldIndexPolicies: []
+      LogGroupClass: "STANDARD"
+      LogGroupName: "/aws/lambda/presign"
+      DataProtectionPolicy: {}
+  ApiGatewayV2Deployment:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  EC2SubnetNetworkAclAssociationXC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId:
+        Ref: "EC2NetworkAcl"
+      SubnetId:
+        Ref: "EC2SubnetM2"
+  LambdaFunctionPresignupload:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionPresignuploadCodeS3ObjectVersionFpF2L"
+        S3Bucket:
+          Ref: "LambdaFunctionPresignuploadCodeS3Bucket0GS8N"
+        ZipFile:
+          Ref: "LambdaFunctionPresignuploadCodeZipFileVLk8P"
+        ImageUri:
+          Ref: "LambdaFunctionPresignuploadCodeImageUriQBvYh"
+        S3Key:
+          Ref: "LambdaFunctionPresignuploadCodeS3KeylF1u8"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleDocsearchlambdarole"
+        - "Arn"
+      FunctionName: "presign-upload"
+      Runtime: "python3.11"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/presign-upload"
+      Environment:
+        Variables:
+          CHAT_MODEL_ID: "amazon.nova-micro-v1:0"
+          TABLE_NAME: "DocChunks"
+          BEDROCK_REGION: "us-east-1"
+          DOCS_BUCKET: "kittymeow-doc-bucket"
+          EMBED_MODEL_ID: "amazon.titan-embed-text-v2:0"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  LogsLogStream20250921LATEST1d300c25f845450584f2513485b243ac:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]1d300c25f845450584f2513485b243ac"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  CloudFrontOriginRequestPolicy:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "all"
+        Comment: "Policy to forward all parameters in viewer requests"
+        HeadersConfig:
+          HeaderBehavior: "allViewer"
+        CookiesConfig:
+          CookieBehavior: "all"
+        Name: "Managed-AllViewer"
+  LogsLogStream20250921LATEST695f2094a5e1473a99266d7d9a7fbbab:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]695f2094a5e1473a99266d7d9a7fbbab"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATEST85919fb4df4746b7b59746597138ab95:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]85919fb4df4746b7b59746597138ab95"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  ApiGatewayV2DeploymentEj:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  CloudFrontCachePolicyET:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Amplify cache policy for image optimization"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "RSC"
+            - "Accept"
+            - "CloudFront-Viewer-Country"
+            - "X-Amplify-Dpl"
+            - "Host"
+          CookiesConfig:
+            Cookies:
+            - "__dpl"
+            CookieBehavior: "whitelist"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-ImageOptimization-V2"
+  CloudFrontOriginRequestPolicyIA:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "all"
+        Comment: "Policy for Elemental MediaTailor Origin"
+        HeadersConfig:
+          HeaderBehavior: "whitelist"
+          Headers:
+          - "origin"
+          - "access-control-request-headers"
+          - "x-forwarded-for"
+          - "access-control-request-method"
+          - "user-agent"
+        CookiesConfig:
+          CookieBehavior: "none"
+        Name: "Managed-Elemental-MediaTailor-PersonalizedManifests"
+  CloudFrontCachePolicyVF:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Policy for origins that return Cache-Control headers. Query strings\
+          \ are not included in the cache key."
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "none"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "x-method-override"
+            - "origin"
+            - "host"
+            - "x-http-method"
+            - "x-http-method-override"
+          CookiesConfig:
+            CookieBehavior: "all"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "UseOriginCacheControlHeaders"
+  LogsLogStream20250921LATESTd213195b6ded43b4bd32d6a36b9fceb2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]d213195b6ded43b4bd32d6a36b9fceb2"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST4237d2b3e4d94109bce3e87b850258cf:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]4237d2b3e4d94109bce3e87b850258cf"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250921LATEST25f4636b74fd49609252a2f5ab42b1da:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]25f4636b74fd49609252a2f5ab42b1da"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogGroupawslambdaingest:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      FieldIndexPolicies: []
+      LogGroupClass: "STANDARD"
+      LogGroupName: "/aws/lambda/ingest"
+      DataProtectionPolicy: {}
+  CloudFrontOriginAccessControl:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginAccessControl"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginAccessControlConfig:
+        SigningBehavior: "always"
+        Description: "Created by CloudFront"
+        SigningProtocol: "sigv4"
+        OriginAccessControlOriginType: "s3"
+        Name: "oac-kittymeow-webpage-bucket.s3.ap-southeast-5.amazo-mft0tjufq72"
+  LogsLogStream20250920LATESTbf5d539ca0bc4b28a0cb09f8f005853b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]bf5d539ca0bc4b28a0cb09f8f005853b"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250920LATEST2c55140ff357400d955c35c2f198890c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]2c55140ff357400d955c35c2f198890c"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST851e3e76dea24082931346d258baadab:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]851e3e76dea24082931346d258baadab"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  CloudFrontCachePolicyGr:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Default Amplify cache policy without cookies"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "Accept"
+            - "CloudFront-Viewer-Country"
+            - "Host"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-DefaultNoCookies"
+  EventsEventBusDefault:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Events::EventBus"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tags: []
+      Name: "default"
+  CloudFrontCachePolicyHU:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Policy for origins that return Cache-Control headers and serve different\
+          \ content based on values present in the query string."
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "x-method-override"
+            - "origin"
+            - "host"
+            - "x-http-method"
+            - "x-http-method-override"
+          CookiesConfig:
+            CookieBehavior: "all"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "UseOriginCacheControlHeaders-QueryStrings"
+  LogsLogStream20250921LATESTdef06a67c5cc4d948c5d90375f4f2ec8:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]def06a67c5cc4d948c5d90375f4f2ec8"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST8870e85b62b64690a41264e98a8b68e8:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]8870e85b62b64690a41264e98a8b68e8"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATEST0154cea39b4040d680f32adda0fcc1d9:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]0154cea39b4040d680f32adda0fcc1d9"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  CloudFrontOriginRequestPolicyV6:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "all"
+        Comment: "Policy to forward all parameters in viewer requests and all CloudFront\
+          \ headers as of June 2022"
+        HeadersConfig:
+          HeaderBehavior: "allViewerAndWhitelistCloudFront"
+          Headers:
+          - "CloudFront-Viewer-Time-Zone"
+          - "CloudFront-Viewer-Address"
+          - "CloudFront-Viewer-Country"
+          - "CloudFront-Is-IOS-Viewer"
+          - "CloudFront-Is-Tablet-Viewer"
+          - "CloudFront-Forwarded-Proto"
+          - "CloudFront-Viewer-Country-Name"
+          - "CloudFront-Is-Mobile-Viewer"
+          - "CloudFront-Is-SmartTV-Viewer"
+          - "CloudFront-Viewer-Country-Region"
+          - "CloudFront-Is-Android-Viewer"
+          - "CloudFront-Viewer-Country-Region-Name"
+          - "CloudFront-Viewer-City"
+          - "CloudFront-Viewer-Latitude"
+          - "CloudFront-Viewer-Longitude"
+          - "CloudFront-Viewer-Http-Version"
+          - "CloudFront-Viewer-Postal-Code"
+          - "CloudFront-Viewer-ASN"
+          - "CloudFront-Is-Desktop-Viewer"
+          - "CloudFront-Viewer-Metro-Code"
+          - "CloudFront-Viewer-TLS"
+        CookiesConfig:
+          CookieBehavior: "all"
+        Name: "Managed-AllViewerAndCloudFrontHeaders-2022-06"
+  LogsLogStream20250921LATEST4cbb9ddb997e4bcb8cb5588c37fd2e01:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]4cbb9ddb997e4bcb8cb5588c37fd2e01"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  IAMRoleAWSServiceRoleForCloudTrail:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/cloudtrail.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/CloudTrailServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForCloudTrail"
+      Description: "This service-linked role is used for supporting organization trail\
+        \ feature"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "cloudtrail.amazonaws.com"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole58f3ff33050040f5887bbe767926824b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-58f3ff33-0500-40f5-887b-be767926824b"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/cors-handler:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleCorshandlerrolemjdppirp"
+      Users: []
+  LogsLogStream20250921LATEST3d592ede27554b078969556c86b84a64:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]3d592ede27554b078969556c86b84a64"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  CloudFrontCachePolicyGJ:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Default Amplify cache policy"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "RSC"
+            - "Accept"
+            - "CloudFront-Viewer-Country"
+            - "X-Amplify-Dpl"
+            - "Host"
+          CookiesConfig:
+            CookieBehavior: "all"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-Default-V2"
+  LogsLogStream20250920LATEST5cd36eb5897145939ca21f0c025df750:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]5cd36eb5897145939ca21f0c025df750"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  IAMRoleIngestrolerv2v347o:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-e08bd8eb-8f4b-4109-bc3c-480b2b4f8f00"
+      MaxSessionDuration: 3600
+      RoleName: "ingest-role-rv2v347o"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole030dc4e6be84499180818d95ad92307d:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-030dc4e6-be84-4991-8081-8d95ad92307d"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-1:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-1:497046674032:log-group:/aws/lambda/ingest:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleIngestroler2236lwv"
+      Users: []
+  IAMRoleAWSServiceRoleForAPIGateway:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/ops.apigateway.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/APIGatewayServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForAPIGateway"
+      Description: "The Service Linked Role is used by Amazon API Gateway."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "ops.apigateway.amazonaws.com"
+  LogsLogStream20250921LATESTf58cc887f967482eabc9063949728bbc:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]f58cc887f967482eabc9063949728bbc"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  IAMRoleAWSServiceRoleForTrustedAdvisor:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/trustedadvisor.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/AWSTrustedAdvisorServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForTrustedAdvisor"
+      Description: "Access for the AWS Trusted Advisor Service to help reduce cost,\
+        \ increase performance, and improve security of your AWS environment."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "trustedadvisor.amazonaws.com"
+  CloudFrontCachePolicy:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Policy for Elemental MediaPackage Origin"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStrings:
+            - "aws.manifestfilter"
+            - "start"
+            - "end"
+            - "m"
+            QueryStringBehavior: "whitelist"
+          EnableAcceptEncodingBrotli: false
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "origin"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 86400
+        Name: "Managed-Elemental-MediaPackage"
+  LambdaPermissionFunctioncorshandlerAw:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionCorshandler"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:ap-southeast-5:497046674032:z14hu7qir0/*/*/presign-upload"
+      Principal: "apigateway.amazonaws.com"
+  LogsLogStream20250921LATEST2fabb565626443d794d5afb00e4215d0:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]2fabb565626443d794d5afb00e4215d0"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  CloudFrontCachePolicyGX:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Amplify cache policy for image optimization"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "Accept"
+            - "Host"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-ImageOptimization"
+  EC2VPCDHCPOptionsAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCDHCPOptionsAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId:
+        Ref: "EC2VPC"
+      DhcpOptionsId:
+        Ref: "EC2DHCPOptions"
+  LogsLogStream20250921LATEST35c919a664ac453b8fd0ad1bd60463be:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]35c919a664ac453b8fd0ad1bd60463be"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250921LATESTe302cec1e3494f32b031c58a54c8fd0d:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]e302cec1e3494f32b031c58a54c8fd0d"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250920LATESTea99eccc47c94b9da58448113d73fbb3:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]ea99eccc47c94b9da58448113d73fbb3"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST6ec64522f5914c27a8754db0f00b1b54:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]6ec64522f5914c27a8754db0f00b1b54"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  ApiGatewayV2DeploymentWl:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  EC2SubnetEf:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: true
+      EnableDns64: false
+      VpcId:
+        Ref: "EC2VPC"
+      AvailabilityZoneId: "apse5-az3"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      CidrBlock: "172.31.32.0/20"
+      Ipv6Native: false
+      Tags: []
+  LogsLogStream20250921LATEST80e6236abc2e4ac8ab9f487054ad7950:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]80e6236abc2e4ac8ab9f487054ad7950"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LambdaFunctionIngest:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 512
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 120
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionIngestCodeS3ObjectVersionxCU96"
+        S3Bucket:
+          Ref: "LambdaFunctionIngestCodeS3BucketEWdkp"
+        ZipFile:
+          Ref: "LambdaFunctionIngestCodeZipFileVs7RV"
+        ImageUri:
+          Ref: "LambdaFunctionIngestCodeImageUrifDxLr"
+        S3Key:
+          Ref: "LambdaFunctionIngestCodeS3KeytBDmQ"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleDocsearchlambdarole"
+        - "Arn"
+      FunctionName: "ingest"
+      Runtime: "python3.13"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/ingest"
+      Environment:
+        Variables:
+          CHAT_MODEL_ID: "amazon.nova-micro-v1:0"
+          TABLE_NAME: "DocChunks"
+          BEDROCK_REGION: "us-east-1"
+          DOCS_BUCKET: "kittymeow-doc-bucket"
+          EMBED_MODEL_ID: "amazon.titan-embed-text-v2:0"
+      EphemeralStorage:
+        Size: 512
+      Layers:
+      - "arn:aws:lambda:ap-southeast-5:497046674032:layer:chardet:1"
+      - "arn:aws:lambda:ap-southeast-5:497046674032:layer:pdf-layer:1"
+      - "arn:aws:lambda:ap-southeast-5:497046674032:layer:layer-test:3"
+      - "arn:aws:lambda:ap-southeast-5:497046674032:layer:layer2-test:1"
+      Architectures:
+      - "x86_64"
+  LogsLogStream20250921LATESTf12b9d12115d4fa28056e417372bc27f:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]f12b9d12115d4fa28056e417372bc27f"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST13c46598b6fc45ccbed3b6a09fc4c961:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]13c46598b6fc45ccbed3b6a09fc4c961"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LambdaPermissionFunctionpresignupload:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionPresignupload"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:ap-southeast-5:497046674032:z14hu7qir0/*/*/presign-upload"
+      Principal: "apigateway.amazonaws.com"
+  IAMRoleAWSReservedSSOawsisbIsbUsersPS6e2b32d70b05414c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-reserved/sso.amazonaws.com/ap-southeast-1/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AdministratorAccess"
+      MaxSessionDuration: 43200
+      RoleName: "AWSReservedSSO_awsisb_IsbUsersPS_6e2b32d70b05414c"
+      Description: "User PermissionSet for the Innovation Sandbox on AWS solution"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              SAML:aud: "https://signin.aws.amazon.com/saml"
+          Action:
+          - "sts:AssumeRoleWithSAML"
+          - "sts:TagSession"
+          Effect: "Allow"
+          Principal:
+            Federated: "arn:aws:iam::497046674032:saml-provider/AWSSSO_d384ea4aba04e967_DO_NOT_DELETE"
+  ElastiCacheUser:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElastiCache::User"
+    DeletionPolicy: "Retain"
+    Properties:
+      UserName: "default"
+      UserId: "default"
+      Engine: "redis"
+      Tags: []
+  ApiGatewayV2DeploymentYf:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  ApiGatewayV2DeploymentHs:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  CloudFrontCachePolicyJR:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Amplify cache policy for static content"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStrings:
+            - "dpl"
+            QueryStringBehavior: "whitelist"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "RSC"
+            - "CloudFront-Viewer-Country"
+            - "X-Amplify-Dpl"
+            - "Host"
+          CookiesConfig:
+            Cookies:
+            - "__dpl"
+            CookieBehavior: "whitelist"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-StaticContent-V2"
+  LogsLogStream20250921LATEST4206ceb309ea4047956f4cc95713142d:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]4206ceb309ea4047956f4cc95713142d"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250922LATEST5159586535024005b539dde73623ed6b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/22/[$LATEST]5159586535024005b539dde73623ed6b"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  IAMRoleIngestroler2236lwv:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-030dc4e6-be84-4991-8081-8d95ad92307d"
+      MaxSessionDuration: 3600
+      RoleName: "ingest-role-r2236lwv"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  CloudFrontOriginRequestPolicySR:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "all"
+        Comment: "Policy to forward all parameters in viewer requests except for the\
+          \ Host header"
+        HeadersConfig:
+          HeaderBehavior: "allExcept"
+          Headers:
+          - "host"
+        CookiesConfig:
+          CookieBehavior: "all"
+        Name: "Managed-AllViewerExceptHostHeader"
+  CloudFrontOriginRequestPolicyBj:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "none"
+        Comment: "Policy to forward user-agent and referer headers to origin"
+        HeadersConfig:
+          HeaderBehavior: "whitelist"
+          Headers:
+          - "referer"
+          - "user-agent"
+        CookiesConfig:
+          CookieBehavior: "none"
+        Name: "Managed-UserAgentRefererHeaders"
+  LogsLogStream20250921LATEST502dbc0db9214c2ba984a8f95bbfbb0c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]502dbc0db9214c2ba984a8f95bbfbb0c"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  ApiGatewayV2DeploymentIh:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  CloudFrontCachePolicyJA:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Policy with caching disabled"
+        MinTTL: 0
+        MaxTTL: 0
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "none"
+          EnableAcceptEncodingBrotli: false
+          HeadersConfig:
+            HeaderBehavior: "none"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: false
+        DefaultTTL: 0
+        Name: "Managed-CachingDisabled"
+  LogsLogStream20250921LATEST15cbc674f7dc4b0aab08a202677ae8b5:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]15cbc674f7dc4b0aab08a202677ae8b5"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole31fa4b488b31462e8102b987cbbc33ea:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-31fa4b48-8b31-462e-8102-b987cbbc33ea"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/query:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleQueryroled35rupd4"
+      Users: []
+  LogsLogStream20250921LATEST4dc646268c53469aa4977dd78bee9d9e:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]4dc646268c53469aa4977dd78bee9d9e"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  ApiGatewayV2DeploymentJD:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATEST4bcf5207c7df441a949c2985f590497a:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]4bcf5207c7df441a949c2985f590497a"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  LogsLogStream20250921LATEST24ec9474fbb148ffb92e2477257f81e8:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]24ec9474fbb148ffb92e2477257f81e8"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATESTf2612f833a3a4f77abde660a7c97fe75:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]f2612f833a3a4f77abde660a7c97fe75"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  IAMRoleAWSServiceRoleForCloudFormationStackSetsOrgMember:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/member.org.stacksets.cloudformation.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/CloudFormationStackSetsOrgMemberServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForCloudFormationStackSetsOrgMember"
+      Description: "Service linked role for CloudFormation StackSets (Organization\
+        \ Member)"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "member.org.stacksets.cloudformation.amazonaws.com"
+  LogsLogStream20250921LATESTa6b72bc360dd4204879aebd76059015e:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]a6b72bc360dd4204879aebd76059015e"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST07ffec6cf1594817a495b1aad87fe950:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]07ffec6cf1594817a495b1aad87fe950"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  LogsLogGroupawslambdapresignupload:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      FieldIndexPolicies: []
+      LogGroupClass: "STANDARD"
+      LogGroupName: "/aws/lambda/presign-upload"
+      DataProtectionPolicy: {}
+  LogsLogStream20250921LATEST5a5044f869fb45f19b6a8ea1036fb479:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]5a5044f869fb45f19b6a8ea1036fb479"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATESTb5afd4156f1743e2a9cf256630fcd492:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]b5afd4156f1743e2a9cf256630fcd492"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATESTa90b1d69ff6940998b5c75aa24583c5c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]a90b1d69ff6940998b5c75aa24583c5c"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  EC2SubnetNetworkAclAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId:
+        Ref: "EC2NetworkAcl"
+      SubnetId:
+        Ref: "EC2Subnet"
+  ApiGatewayV2DeploymentKO:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LambdaPermissionFunctionpresign:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionPresign"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:ap-southeast-5:497046674032:z14hu7qir0/*/*/presign"
+      Principal: "apigateway.amazonaws.com"
+  LambdaPermissionFunctionquery:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionQuery"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:ap-southeast-5:497046674032:z14hu7qir0/*/*/query"
+      Principal: "apigateway.amazonaws.com"
+  LogsLogStream20250921LATEST0b0a2c9104bc4e74b23e8244ad394cba:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]0b0a2c9104bc4e74b23e8244ad394cba"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST97e70f998cc14b6294dd59887a2e513e:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]97e70f998cc14b6294dd59887a2e513e"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  LogsLogStream20250922LATESTe15186bd56824fd3a67ffd4cead222c2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/22/[$LATEST]e15186bd56824fd3a67ffd4cead222c2"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LambdaPermissionFunctioncorshandlerGD:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionCorshandler"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:ap-southeast-5:497046674032:z14hu7qir0/*/*/presign"
+      Principal: "apigateway.amazonaws.com"
+  LambdaPermissionFunctioncorshandler:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Permission"
+    DeletionPolicy: "Retain"
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - "LambdaFunctionCorshandler"
+        - "Arn"
+      Action: "lambda:InvokeFunction"
+      SourceArn: "arn:aws:execute-api:ap-southeast-5:497046674032:z14hu7qir0/*/*/query"
+      Principal: "apigateway.amazonaws.com"
+  LogsLogStream20250921LATESTeafeffd075154392bce3753d3fe9c265:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]eafeffd075154392bce3753d3fe9c265"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LambdaFunctionQuery:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 30
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionQueryCodeS3ObjectVersioneCftG"
+        S3Bucket:
+          Ref: "LambdaFunctionQueryCodeS3BucketLey9W"
+        ZipFile:
+          Ref: "LambdaFunctionQueryCodeZipFileojjtG"
+        ImageUri:
+          Ref: "LambdaFunctionQueryCodeImageUrip0oDb"
+        S3Key:
+          Ref: "LambdaFunctionQueryCodeS3KeyFNLan"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleDocsearchlambdarole"
+        - "Arn"
+      FunctionName: "query"
+      Runtime: "python3.11"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/query"
+      Environment:
+        Variables:
+          CHAT_MODEL_ID: "amazon.nova-micro-v1:0"
+          TABLE_NAME: "DocChunks"
+          BEDROCK_REGION: "us-east-1"
+          DOCS_BUCKET: "kittymeow-doc-bucket"
+          EMBED_MODEL_ID: "amazon.titan-embed-text-v2:0"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  KMSKey:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::KMS::Key"
+    DeletionPolicy: "Retain"
+    Properties:
+      Origin: "AWS_KMS"
+      MultiRegion: false
+      Description: "Default key that protects my Lambda functions when no other key\
+        \ is defined"
+      KeyPolicy:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              kms:ViaService: "lambda.ap-southeast-5.amazonaws.com"
+              kms:CallerAccount: "497046674032"
+          Resource: "*"
+          Action:
+          - "kms:Encrypt"
+          - "kms:Decrypt"
+          - "kms:ReEncrypt*"
+          - "kms:GenerateDataKey*"
+          - "kms:CreateGrant"
+          - "kms:DescribeKey"
+          Effect: "Allow"
+          Principal:
+            AWS: "*"
+          Sid: "Allow access through AWS Lambda for all principals in the account\
+            \ that are authorized to use AWS Lambda"
+        - Resource: "*"
+          Action:
+          - "kms:Describe*"
+          - "kms:Get*"
+          - "kms:List*"
+          - "kms:RevokeGrant"
+          Effect: "Allow"
+          Principal:
+            AWS: "arn:aws:iam::497046674032:root"
+          Sid: "Allow direct access to key metadata to the account"
+        Id: "auto-awslambda"
+      KeySpec: "SYMMETRIC_DEFAULT"
+      Enabled: true
+      EnableKeyRotation: true
+      KeyUsage: "ENCRYPT_DECRYPT"
+      Tags: []
+  LogsLogStream20250921LATESTed2d7930fc274f89b60cc81f75970ef0:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]ed2d7930fc274f89b60cc81f75970ef0"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  ApiGatewayV2DeploymentLD:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  CloudFrontOriginRequestPolicyAi:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "none"
+        Comment: "Policy for S3 origin with CORS"
+        HeadersConfig:
+          HeaderBehavior: "whitelist"
+          Headers:
+          - "origin"
+          - "access-control-request-headers"
+          - "access-control-request-method"
+        CookiesConfig:
+          CookieBehavior: "none"
+        Name: "Managed-CORS-S3Origin"
+  LogsLogStream20250921LATESTe65c1e788e7b4cf9ad81807285a0e49c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]e65c1e788e7b4cf9ad81807285a0e49c"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  IAMRoleAWSServiceRoleForOrganizations:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/organizations.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/AWSOrganizationsServiceTrustPolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForOrganizations"
+      Description: "Service-linked role used by AWS Organizations to enable integration\
+        \ of other AWS services with Organizations."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "organizations.amazonaws.com"
+  IAMRolePresignuploadrole6u3dqe3g:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-842d18fb-a3b8-475f-9ceb-2cfdd4f704d4"
+      MaxSessionDuration: 3600
+      RoleName: "presign-upload-role-6u3dqe3g"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  IAMRoleAWSReservedSSOawsisbIsbManagersPS707e423b7da62988:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-reserved/sso.amazonaws.com/ap-southeast-1/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AdministratorAccess"
+      MaxSessionDuration: 43200
+      RoleName: "AWSReservedSSO_awsisb_IsbManagersPS_707e423b7da62988"
+      Description: "Manager PermissionSet for the Innovation Sandbox on AWS solution"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              SAML:aud: "https://signin.aws.amazon.com/saml"
+          Action:
+          - "sts:AssumeRoleWithSAML"
+          - "sts:TagSession"
+          Effect: "Allow"
+          Principal:
+            Federated: "arn:aws:iam::497046674032:saml-provider/AWSSSO_d384ea4aba04e967_DO_NOT_DELETE"
+  IAMRoleOrganizationAccountAccessRole:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AdministratorAccess"
+      MaxSessionDuration: 3600
+      RoleName: "OrganizationAccountAccessRole"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            AWS: "arn:aws:iam::717408097266:root"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole1eda7fe8bf4d4f6685d091f8d7999c03:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-1eda7fe8-bf4d-4f66-85d0-91f8d7999c03"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/ingest:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleIngestrolergxb4dpu"
+      Users: []
+  LogsLogStream20250921LATEST0f90a50a80a14ce5bdc7ded8bcaa75d0:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]0f90a50a80a14ce5bdc7ded8bcaa75d0"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST982a665352f84b55a3a6737e035fa809:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]982a665352f84b55a3a6737e035fa809"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATESTb62be06b8a7e4e1f89983ab5617d054c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]b62be06b8a7e4e1f89983ab5617d054c"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATEST3507fdf2df5e4379ad264a90eeed24fc:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]3507fdf2df5e4379ad264a90eeed24fc"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATESTc11aa5a9f96b4e75a85120ccb732ecdd:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]c11aa5a9f96b4e75a85120ccb732ecdd"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATESTd786e31af8604003a6d4bf5b102a3d61:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]d786e31af8604003a6d4bf5b102a3d61"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250920LATEST58e37e727323467091e9571002cd3319:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]58e37e727323467091e9571002cd3319"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250920LATEST0a7bbb894bf54da7bf76deae04052913:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]0a7bbb894bf54da7bf76deae04052913"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  IAMRoleAdminreindexrole6j6oswu5:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-c9050a53-e20e-4509-8105-dbaf2446c30f"
+      MaxSessionDuration: 3600
+      RoleName: "admin-reindex-role-6j6oswu5"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  ApiGatewayV2DeploymentMw:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250920LATESTe060782f64674e4587ba31aeee27f241:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]e060782f64674e4587ba31aeee27f241"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  ApiGatewayV2DeploymentNP:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  EC2VPC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "172.31.0.0/16"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: true
+      Tags: []
+  IAMRoleAWSServiceRoleForSSO:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/sso.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/AWSSSOServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForSSO"
+      Description: "Service-linked role used by AWS SSO to manage AWS resources, including\
+        \ IAM roles, policies and SAML IdP on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "sso.amazonaws.com"
+  LogsLogStream20250921LATEST4f23216790244ef09ae28d337b9d384a:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]4f23216790244ef09ae28d337b9d384a"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST44bfd56da4304421a33433e272a2d7d4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]44bfd56da4304421a33433e272a2d7d4"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST45faa5ad34ab47beafe37b708794d17d:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]45faa5ad34ab47beafe37b708794d17d"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  CloudFrontCachePolicyMi:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Default Amplify cache policy without cookies"
+        MinTTL: 0
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "all"
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: "whitelist"
+            Headers:
+            - "Authorization"
+            - "RSC"
+            - "Accept"
+            - "CloudFront-Viewer-Country"
+            - "X-Amplify-Dpl"
+            - "Host"
+          CookiesConfig:
+            Cookies:
+            - "__dpl"
+            CookieBehavior: "whitelist"
+          EnableAcceptEncodingGzip: true
+        DefaultTTL: 0
+        Name: "Managed-Amplify-DefaultNoCookies-V2"
+  CloudFrontCachePolicyQ3:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::CachePolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      CachePolicyConfig:
+        Comment: "Default policy when compression is disabled"
+        MinTTL: 1
+        MaxTTL: 3.1536E7
+        ParametersInCacheKeyAndForwardedToOrigin:
+          QueryStringsConfig:
+            QueryStringBehavior: "none"
+          EnableAcceptEncodingBrotli: false
+          HeadersConfig:
+            HeaderBehavior: "none"
+          CookiesConfig:
+            CookieBehavior: "none"
+          EnableAcceptEncodingGzip: false
+        DefaultTTL: 86400
+        Name: "Managed-CachingOptimizedForUncompressedObjects"
+  LogsLogStream20250921LATEST7f195bdeb2f149f6b54cc13b58b4bb05:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]7f195bdeb2f149f6b54cc13b58b4bb05"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LambdaFunctionPresign:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionPresignCodeS3ObjectVersionzeEpb"
+        S3Bucket:
+          Ref: "LambdaFunctionPresignCodeS3Bucketan6EN"
+        ZipFile:
+          Ref: "LambdaFunctionPresignCodeZipFileALvut"
+        ImageUri:
+          Ref: "LambdaFunctionPresignCodeImageUrifljlF"
+        S3Key:
+          Ref: "LambdaFunctionPresignCodeS3KeygVfho"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleDocsearchlambdarole"
+        - "Arn"
+      FunctionName: "presign"
+      Runtime: "python3.11"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/presign"
+      Environment:
+        Variables:
+          CHAT_MODEL_ID: "amazon.nova-micro-v1:0"
+          TABLE_NAME: "DocChunks"
+          BEDROCK_REGION: "us-east-1"
+          DOCS_BUCKET: "kittymeow-doc-bucket"
+          EMBED_MODEL_ID: "amazon.titan-embed-text-v2:0"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  IAMRolePresignroleazruq7dt:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-7822808b-a27c-4720-83fe-725913dcb201"
+      MaxSessionDuration: 3600
+      RoleName: "presign-role-azruq7dt"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  ApiGatewayV2DeploymentOX:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATEST669bfc3f52c24c688c63551b2be987a2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]669bfc3f52c24c688c63551b2be987a2"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  XRayGroupGroupDefault:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::XRay::Group"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupName: "Default"
+      InsightsConfiguration:
+        InsightsEnabled: false
+        NotificationsEnabled: false
+      Tags: []
+  ApiGatewayV2DeploymentNp:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  ApiGatewayV2DeploymentON:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  S3BucketKittymeowdocbucket:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: false
+        IgnorePublicAcls: false
+        BlockPublicPolicy: false
+        BlockPublicAcls: false
+      BucketName: "kittymeow-doc-bucket"
+      CorsConfiguration:
+        CorsRules:
+        - MaxAge: 3000
+          ExposedHeaders:
+          - "ETag"
+          - "Content-Type"
+          - "Content-Length"
+          AllowedMethods:
+          - "PUT"
+          - "GET"
+          - "HEAD"
+          AllowedOrigins:
+          - "https://d2203w8umw4us0.cloudfront.net"
+          - "http://localhost:5173"
+          AllowedHeaders:
+          - "*"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+      NotificationConfiguration:
+        QueueConfigurations: []
+        TopicConfigurations: []
+        LambdaConfigurations:
+        - Function:
+            Fn::GetAtt:
+            - "LambdaFunctionIngest"
+            - "Arn"
+          Filter:
+            S3Key:
+              Rules:
+              - Value: "uploads/"
+                Name: "Prefix"
+          Event: "s3:ObjectCreated:*"
+      VersioningConfiguration:
+        Status: "Enabled"
+  CloudFrontOriginRequestPolicyN2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::OriginRequestPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      OriginRequestPolicyConfig:
+        QueryStringsConfig:
+          QueryStringBehavior: "none"
+        Comment: "Policy for custom origin with CORS"
+        HeadersConfig:
+          HeaderBehavior: "whitelist"
+          Headers:
+          - "origin"
+        CookiesConfig:
+          CookieBehavior: "none"
+        Name: "Managed-CORS-CustomOrigin"
+  IAMRoleIngestrolergxb4dpu:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/service-role/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::497046674032:policy/service-role/AWSLambdaBasicExecutionRole-1eda7fe8-bf4d-4f66-85d0-91f8d7999c03"
+      MaxSessionDuration: 3600
+      RoleName: "ingest-role-rgxb4dpu"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "lambda.amazonaws.com"
+  LogsLogStream20250921LATEST372248696f1b441f8d2e7d9cfda53903:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]372248696f1b441f8d2e7d9cfda53903"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATESTb37845a665ad4060bcbb022e613ec104:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]b37845a665ad4060bcbb022e613ec104"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST985a74ce01704d628f5afe07da3d0277:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]985a74ce01704d628f5afe07da3d0277"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRole842d18fba3b8475f9ceb2cfdd4f704d4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-842d18fb-a3b8-475f-9ceb-2cfdd4f704d4"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/presign-upload:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRolePresignuploadrole6u3dqe3g"
+      Users: []
+  EC2DHCPOptions:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::DHCPOptions"
+    DeletionPolicy: "Retain"
+    Properties:
+      DomainName: "ap-southeast-5.compute.internal"
+      DomainNameServers:
+      - "AmazonProvidedDNS"
+      Tags: []
+  ApiGatewayV2DeploymentOt:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATEST68bce42f46b946a6b9b0caf3b99b13fd:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]68bce42f46b946a6b9b0caf3b99b13fd"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST3711cf7d42f04b1f9496da8717b37c0e:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]3711cf7d42f04b1f9496da8717b37c0e"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATEST362907f535564353a90ddff94d009999:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]362907f535564353a90ddff94d009999"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250920LATEST06d9726267c34a6caea7796c9f165bc3:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]06d9726267c34a6caea7796c9f165bc3"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATEST5a06ccbfa9fb48e9a76c51f798410079:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]5a06ccbfa9fb48e9a76c51f798410079"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  LambdaFunctionCorshandler:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Lambda::Function"
+    DeletionPolicy: "Retain"
+    Properties:
+      MemorySize: 128
+      Description: ""
+      TracingConfig:
+        Mode: "PassThrough"
+      Timeout: 3
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: "Auto"
+      Handler: "lambda_function.lambda_handler"
+      Code:
+        S3ObjectVersion:
+          Ref: "LambdaFunctionCorshandlerCodeS3ObjectVersionOn2rw"
+        S3Bucket:
+          Ref: "LambdaFunctionCorshandlerCodeS3Bucketwu13F"
+        ZipFile:
+          Ref: "LambdaFunctionCorshandlerCodeZipFileZpRxg"
+        ImageUri:
+          Ref: "LambdaFunctionCorshandlerCodeImageUrii3tSp"
+        S3Key:
+          Ref: "LambdaFunctionCorshandlerCodeS3KeyEYKcS"
+      Role:
+        Fn::GetAtt:
+        - "IAMRoleCorshandlerrolemjdppirp"
+        - "Arn"
+      FunctionName: "cors-handler"
+      Runtime: "python3.11"
+      PackageType: "Zip"
+      LoggingConfig:
+        LogFormat: "Text"
+        LogGroup: "/aws/lambda/cors-handler"
+      EphemeralStorage:
+        Size: 512
+      Architectures:
+      - "x86_64"
+  LogsLogStream20250921LATEST02ce10f392644a54b9a91fbdd9d8fc05:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]02ce10f392644a54b9a91fbdd9d8fc05"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresignupload"
+  LogsLogStream20250921LATEST1da3f485f537435ab4e349cbd8b6fe77:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]1da3f485f537435ab4e349cbd8b6fe77"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  Route53ResolverResolverRuleAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Route53Resolver::ResolverRuleAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      VPCId:
+        Ref: "EC2VPC"
+      ResolverRuleId: "rslvr-autodefined-rr-internet-resolver"
+      Name: "System Rule Association"
+  LogsLogStream20250921LATEST7b1fd1b109454f67bcc736f0021dcb47:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]7b1fd1b109454f67bcc736f0021dcb47"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  IAMManagedPolicyPolicyserviceroleAWSLambdaBasicExecutionRolec9050a53e20e45098105dbaf2446c30f:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::ManagedPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      ManagedPolicyName: "AWSLambdaBasicExecutionRole-c9050a53-e20e-4509-8105-dbaf2446c30f"
+      Path: "/service-role/"
+      Description: ""
+      Groups: []
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Resource: "arn:aws:logs:ap-southeast-5:497046674032:*"
+          Action: "logs:CreateLogGroup"
+          Effect: "Allow"
+        - Resource:
+          - "arn:aws:logs:ap-southeast-5:497046674032:log-group:/aws/lambda/admin-reindex:*"
+          Action:
+          - "logs:CreateLogStream"
+          - "logs:PutLogEvents"
+          Effect: "Allow"
+      Roles:
+      - Ref: "IAMRoleAdminreindexrole6j6oswu5"
+      Users: []
+  LogsLogStream20250920LATESTa06c1643c826463fbe1f8e304da6c11b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/20/[$LATEST]a06c1643c826463fbe1f8e304da6c11b"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  ApiGatewayV2Api:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Api"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      RouteSelectionExpression: "$request.method $request.path"
+      CorsConfiguration:
+        MaxAge: 3600
+        AllowOrigins:
+        - "*"
+        AllowCredentials: false
+        ExposeHeaders: []
+        AllowMethods:
+        - "GET"
+        - "POST"
+        - "OPTIONS"
+        - "PUT"
+        - "*"
+        AllowHeaders:
+        - "authorization"
+        - "content-type"
+      ProtocolType: "HTTP"
+      DisableExecuteApiEndpoint: false
+      Tags: {}
+      Name: "DocSearchAPI"
+  LogsLogStream20250921LATEST6ad590a8ef9d417e94a6bbbaeeaa335e:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]6ad590a8ef9d417e94a6bbbaeeaa335e"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250922LATEST5a1d94d0bd744701ba54994cbb2aa786:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/22/[$LATEST]5a1d94d0bd744701ba54994cbb2aa786"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdapresign"
+  EC2SubnetNetworkAclAssociationIX:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId:
+        Ref: "EC2NetworkAcl"
+      SubnetId:
+        Ref: "EC2SubnetEf"
+  LogsLogStream20250921LATEST83acf6beb9d840d1b71c946f3e2466a5:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]83acf6beb9d840d1b71c946f3e2466a5"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST8fdfd83c65c547a9a33682d478966d6f:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]8fdfd83c65c547a9a33682d478966d6f"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  LogsLogStream20250921LATEST823d5dc50692412a92a4696588e23f19:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]823d5dc50692412a92a4696588e23f19"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  ApiGatewayV2DeploymentSF:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  CloudFrontDistribution:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::CloudFront::Distribution"
+    DeletionPolicy: "Retain"
+    Properties:
+      DistributionConfig:
+        Logging:
+          IncludeCookies: false
+          Bucket: ""
+          Prefix: ""
+        Comment: "aa"
+        DefaultRootObject: "index.html"
+        Origins:
+        - ConnectionTimeout: 10
+          OriginAccessControlId:
+            Ref: "CloudFrontOriginAccessControl"
+          ConnectionAttempts: 3
+          OriginCustomHeaders: []
+          DomainName:
+            Fn::GetAtt:
+            - "S3BucketKittymeowwebpagebucket"
+            - "RegionalDomainName"
+          OriginShield:
+            Enabled: false
+          S3OriginConfig:
+            OriginReadTimeout: 30
+            OriginAccessIdentity: ""
+          OriginPath: ""
+          Id: "kittymeow-webpage-bucket.s3.ap-southeast-5.amazonaws.com-mft0olabd21"
+        ViewerCertificate:
+          MinimumProtocolVersion: "TLSv1"
+          SslSupportMethod: "vip"
+          CloudFrontDefaultCertificate: true
+        PriceClass: "PriceClass_All"
+        DefaultCacheBehavior:
+          Compress: true
+          FunctionAssociations: []
+          LambdaFunctionAssociations: []
+          TargetOriginId: "kittymeow-webpage-bucket.s3.ap-southeast-5.amazonaws.com-mft0olabd21"
+          ViewerProtocolPolicy: "redirect-to-https"
+          GrpcConfig:
+            Enabled: false
+          TrustedSigners: []
+          FieldLevelEncryptionId: ""
+          TrustedKeyGroups: []
+          AllowedMethods:
+          - "HEAD"
+          - "GET"
+          CachedMethods:
+          - "HEAD"
+          - "GET"
+          SmoothStreaming: false
+          CachePolicyId:
+            Ref: "CloudFrontCachePolicyEf"
+        Staging: false
+        CustomErrorResponses:
+        - ErrorCachingMinTTL: 10
+          ResponseCode: 200
+          ErrorCode: 404
+          ResponsePagePath: "/index.html"
+        ContinuousDeploymentPolicyId: ""
+        OriginGroups:
+          Quantity: 0
+          Items: []
+        Enabled: true
+        Aliases: []
+        IPV6Enabled: true
+        WebACLId: ""
+        HttpVersion: "http2"
+        Restrictions:
+          GeoRestriction:
+            Locations: []
+            RestrictionType: "none"
+        CacheBehaviors: []
+  IAMRoleAWSReservedSSOawsisbIsbAdminsPS8fd243b342ab84d9:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-reserved/sso.amazonaws.com/ap-southeast-1/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AdministratorAccess"
+      MaxSessionDuration: 43200
+      RoleName: "AWSReservedSSO_awsisb_IsbAdminsPS_8fd243b342ab84d9"
+      Description: "Admin PermissionSet for the Innovation Sandbox on AWS solution"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              SAML:aud: "https://signin.aws.amazon.com/saml"
+          Action:
+          - "sts:AssumeRoleWithSAML"
+          - "sts:TagSession"
+          Effect: "Allow"
+          Principal:
+            Federated: "arn:aws:iam::497046674032:saml-provider/AWSSSO_d384ea4aba04e967_DO_NOT_DELETE"
+  LogsLogStream20250921LATEST70eddd23dc794bab98343b63d7882b4f:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]70eddd23dc794bab98343b63d7882b4f"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  ApiGatewayV2DeploymentC5:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATESTe351feee4c4943839fa89740cffee254:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]e351feee4c4943839fa89740cffee254"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  S3BucketPolicyKittymeowwebpagebucket:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::BucketPolicy"
+    DeletionPolicy: "Retain"
+    Properties:
+      Bucket:
+        Ref: "S3BucketKittymeowwebpagebucket"
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Condition:
+            StringEquals:
+              AWS:SourceArn: "arn:aws:cloudfront::497046674032:distribution/E6PFPROFWDEZV"
+          Resource: "arn:aws:s3:::kittymeow-webpage-bucket/*"
+          Action: "s3:GetObject"
+          Effect: "Allow"
+          Principal:
+            Service: "cloudfront.amazonaws.com"
+          Sid: "AllowCloudFrontServicePrincipal"
+        Id: "PolicyForCloudFrontPrivateContent"
+  LogsLogGroupawslambdacorshandler:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      FieldIndexPolicies: []
+      LogGroupClass: "STANDARD"
+      LogGroupName: "/aws/lambda/cors-handler"
+      DataProtectionPolicy: {}
+  LogsLogStream20250921LATEST3e825838f6b4462aac2b4dea7602461e:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]3e825838f6b4462aac2b4dea7602461e"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  ApiGatewayV2DeploymentS9:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATESTc7481a7b87b44d91ad4d3e4b8895ae12:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]c7481a7b87b44d91ad4d3e4b8895ae12"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  LogsLogStream20250921LATESTc069bf75925245369090a3e361930313:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]c069bf75925245369090a3e361930313"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaquery"
+  LogsLogStream20250921LATEST2e884884b34941b6907e29fdabe1639c:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]2e884884b34941b6907e29fdabe1639c"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdacorshandler"
+  S3BucketKittymeowwebpagebucket:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: false
+        IgnorePublicAcls: false
+        BlockPublicPolicy: false
+        BlockPublicAcls: false
+      BucketName: "kittymeow-webpage-bucket"
+      VersioningConfiguration:
+        Status: "Enabled"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  ApiGatewayV2DeploymentQm:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ApiGatewayV2::Deployment"
+    DeletionPolicy: "Retain"
+    Properties:
+      ApiId:
+        Ref: "ApiGatewayV2Api"
+      Description: "Automatic deployment triggered by changes to the Api configuration"
+  LogsLogStream20250921LATESTcaf15218f6994bee8c94a9b6de8cc083:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]caf15218f6994bee8c94a9b6de8cc083"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
+  EC2SubnetM2:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: true
+      EnableDns64: false
+      VpcId:
+        Ref: "EC2VPC"
+      AvailabilityZoneId: "apse5-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      CidrBlock: "172.31.16.0/20"
+      Ipv6Native: false
+      Tags: []
+  IAMRoleAWSServiceRoleForSupport:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/aws-service-role/support.amazonaws.com/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/aws-service-role/AWSSupportServiceRolePolicy"
+      MaxSessionDuration: 3600
+      RoleName: "AWSServiceRoleForSupport"
+      Description: "Enables resource access for AWS to provide billing, administrative\
+        \ and support services"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "support.amazonaws.com"
+  LogsLogStream20250921LATEST7434fe1a5ef1447da842c38f179ead34:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Logs::LogStream"
+    DeletionPolicy: "Retain"
+    Properties:
+      LogStreamName: "2025/09/21/[$LATEST]7434fe1a5ef1447da842c38f179ead34"
+      LogGroupName:
+        Ref: "LogsLogGroupawslambdaingest"
